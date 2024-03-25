@@ -1,5 +1,9 @@
 import processing.core.PApplet;
-
+/**
+* A program Sketch.java that forms interesting patterns in eight different sections
+* using for loops, if statements, and nested loops. 
+* @author: B. Yu
+*/
 public class Sketch extends PApplet {
 	
 	
@@ -151,19 +155,75 @@ public class Sketch extends PApplet {
    * Do NOT use 'if' statements to complete 5-8. Manipulate the loops instead
    */
   public void draw_section5() {
+    int intX = 0;
+    int intY = 0;
+    int intMax = 0;
 
+    for (int intRow = 29; intRow >= 1; intRow--) {
+      intMax ++;
+      for (int intColumn = 30; intColumn >= intMax; intColumn--) {
+        intX = 3 + intRow * 10;  
+        intY = 3 + intColumn * 10; 
+
+        fill(255);
+        noStroke();
+        rect(intX, intY, 5, 5);
+      }
+    }
   }
 
   public void draw_section6() {
+    int intX = 0;
+    int intY = 0;
+    int intMax = -1;
 
+    for (int intRow = 0; intRow <= 30; intRow++) {
+      intMax ++;
+      for (int intColumn = 29; intColumn >= intMax; intColumn--) {
+        intX = 300 + 3 + intRow * 10;  
+        intY = 3 + intColumn * 10; 
+
+        fill(255);
+        noStroke();
+        rect(intX, intY, 5, 5);
+      }
+    }
   }
 
   public void draw_section7() {
+    int intX = 0;
+    int intY = 0;
+    int intMax = 30;
 
+    for (int intRow = 0; intRow <= 30; intRow++) {
+      intMax --;
+      for (int intColumn = 0; intColumn <= intMax; intColumn++) {
+        intX = 600 + 3 + intRow * 10;  
+        intY = 3 + intColumn * 10; 
+
+        fill(255);
+        noStroke();
+        rect(intX, intY, 5, 5);
+      }
+    }
   }
   
   public void draw_section8() {
+    int intX = 0;
+    int intY = 0;
+    int intMax = 31;
 
+    for (int intRow = 30; intRow >= 0; intRow--) {
+      intMax --;
+      for (int intColumn = 0; intColumn <= intMax; intColumn++) {
+        intX = 900 + 3 + intRow * 10;  
+        intY = 3 + intColumn * 10; 
+
+        fill(255);
+        noStroke();
+        rect(intX, intY, 5, 5);
+      }
+    }
   }
 
 }
