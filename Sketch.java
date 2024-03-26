@@ -90,6 +90,7 @@ public class Sketch extends PApplet {
       for (int intColumn = 0; intColumn < 30; intColumn++) {
         intX = 3 + intRow * 10 + 300;  
         intY = 300 + 3 + intColumn * 10;
+        
         if (intRow % 2 == 1) {
           fill(0);
         } else {
@@ -114,6 +115,7 @@ public class Sketch extends PApplet {
       for (int intColumn = 0; intColumn < 30; intColumn++) {
         intX = 3 + intRow * 10 + 600;  
         intY = 300 + 3 + intColumn * 10;
+        
         if (intColumn % 2 == 0) {
           fill(0);
         } else {
@@ -137,12 +139,11 @@ public class Sketch extends PApplet {
       for (int intColumn = 0; intColumn < 30; intColumn++) {
         intX = 3 + intRow * 10 + 900;  
         intY = 300 + 3 + intColumn * 10;
-        if (intColumn % 2 == 0) {
+        
+        fill(255);
+        
+        if (intColumn % 2 == 0 || intRow % 2 == 1) {
           fill(0);
-        } else if (intRow % 2 == 1) {
-          fill(0);
-        } else {
-          fill(255);
         }
 
         noStroke();
